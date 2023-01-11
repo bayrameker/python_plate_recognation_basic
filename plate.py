@@ -27,12 +27,8 @@ for c in contours:
         break
 
 if screenCnt is None:
-    detected = 0
     print ("No contour detected")
 else:
-     detected = 1
-
-if detected == 1:
     cv2.drawContours(img, [screenCnt], -1, (0, 0, 255), 3)
 
 mask = np.zeros(gray.shape,np.uint8)
